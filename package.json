@@ -9,12 +9,14 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "engines": {
+    "node": "10.14.2"
+  },
+  "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "lodash": "^4.17.11",
-    "mongoose": "^5.4.18",
-    "nodemon": "^1.18.10"
+    "mongoose": "^5.4.18"
   }
 }
