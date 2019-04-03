@@ -1,11 +1,11 @@
 // Require - Start
 //-> importa os frameworkers
 
+require("dotenv").config();
 const express = require("express"); // -> Framework Express
 const bodyParser = require("body-parser"); // -> Framework para Express
 const mongoose = require("mongoose"); // -> Framework para o MongoDB
 const _ = require("lodash"); // -> Framework Lodash
-
 
 // APP -> recebe a função express() do framework express
 // app -> É o aplicativo ou a aplicação
@@ -23,7 +23,7 @@ app.use(express.static("public"));
 // ==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>==<>
 
 // Cria ou Connecta com o MongoDB -> Database: todoListDB
-mongoose.connect("mongodb+srv://admin-tsuda:HlGt3231@cluster0-nsrgn.mongodb.net/todoListDB", {useNewUrlParser: true});
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true});
 
 // Mongoose Schema -> é um modelo que facilita a criação de novos objetos no banco de dados
 // itemsSchema -> esquema dos itens da checklist
